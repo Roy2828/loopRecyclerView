@@ -1,0 +1,40 @@
+
+
+ext {
+    sourceVersion = [
+            // BASE COMPONENT
+            compileSdk           : 29,
+            buildTools           : "29.0.1",
+            minSdk               : 24,
+            targetSdk            : 24,
+    ]
+
+
+    lifecycleVersion = "2.3.0"
+
+    //默认参数配置
+    config = [GROUP                  : "com.github.szhittech",
+              POM_PACKAGING          : "aar",
+              HET_NEXUS_RELEASES     : "http://10.6.16.97:8083/nexus/content/repositories/clife-android-releases/",//#发布releases版的地址
+              HET_NEXUS_SNAPSHOTS    : "http://10.6.16.97:8083/nexus/content/repositories/clife-android-snapshots/",//#发布snapshots版的地址
+              HET_NEXUS_ADDRESS      : "http://10.6.16.97:8083/nexus/content/groups/public",//#
+              JCENTER_NEXUS_SNAPSHOTS: "https://oss.sonatype.org/content/repositories/snapshots/",//#JCenter快照版snapshots的地址
+              JCENTER_NEXUS_RELEASES : "https://oss.sonatype.org/service/local/staging/deploy/maven2/",//#JCenter快照版RELEASES 的地址
+              NEXUS_USERNAME         : "szhittech",
+              NEXUS_PASSWORD         : "het123456",
+              NEXUS_USERNAME_HET     : "clife-android",
+              NEXUS_PASSWORD_HET     : "add123",
+              POM_DESCRIPTION        : "szhittech",
+              POM_URL                : "https://github.com/szhittech/szhittech",
+              POM_SCM_URL            : "https://github.com/szhittech/szhittech",
+              POM_SCM_CONNECTION     : "scm:git@github.com:szhittech/szhittech.git",
+              POM_SCM_DEV_CONNECTION : "scm:git@github.com:szhittech/szhittech.git",
+              POM_LICENCE_NAME       : "The Apache Software License, Version 2.0",
+              POM_LICENCE_URL        : "http://www.apache.org/licenses/LICENSE-2.0.txt",
+              POM_LICENCE_DIST       : "repo",
+              POM_DEVELOPER_ID       : "szhittech",
+              POM_DEVELOPER_ID       : "szhittech"
+
+    ]
+
+}

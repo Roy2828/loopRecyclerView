@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.het.host.test.GradientRoundProgress
+        android:id="@+id/pr"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:grp_roundRadius="10dp"
+        app:grp_roundWidth="30dp"
+        app:grp_freqment="30"
+        app:grp_duration="1500"
+        app:grp_max="100"
+        app:grp_startColor="#0000ff"
+        app:grp_endColor="#00ffff"
+        app:grp_shadowColor="#33333333"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <Button
+        android:id="@+id/am"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="@id/pr"
+        app:layout_constraintLeft_toRightOf="@id/pr"
+        android:layout_margin="20dp"
+        android:text="animate"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/tp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="@id/pr"
+        app:layout_constraintLeft_toRightOf="@id/am"
+        android:layout_margin="20dp"
+        android:text="set"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_radiu"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="角度:"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/am"
+        app:layout_constraintLeft_toRightOf="@id/pr"
+        />
+    <SeekBar
+        android:id="@+id/radiusBar"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:min="10"
+        android:max="80"
+        app:layout_constraintTop_toBottomOf="@id/am"
+        app:layout_constraintLeft_toRightOf="@id/tv_radiu"
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="时间:"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_radiu"
+        app:layout_constraintLeft_toRightOf="@id/pr"
+        />
+    <SeekBar
+        android:id="@+id/timeBar"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:min="1000"
+        android:max="10000"
+        app:layout_constraintTop_toBottomOf="@id/tv_radiu"
+        app:layout_constraintLeft_toRightOf="@id/tv_time"
+        />
+    <TextView
+        android:id="@+id/tv_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="帧率:"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"
+        app:layout_constraintLeft_toRightOf="@id/pr"
+        />
+    <SeekBar
+        android:id="@+id/freqBar"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:min="30"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"
+        app:layout_constraintLeft_toRightOf="@id/tv_freq"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/pre"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="20dp"
+        android:text="pre"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
+        android:text="next"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        android:layout_margin="20dp"
+        android:text="next"
+        android:textSize="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotChatHistory">
+    <option name="conversations">
+      <list>
+        <Conversation>
+          <option name="createTime" value="1732960113625" />
+          <option name="id" value="01937c78d3d97c68b64396968bbad05a" />
+          <option name="title" value="新对话 2024年11月30日 17:48:33" />
+          <option name="updateTime" value="1732960113625" />
+        </Conversation>
+        <Conversation>
+          <option name="createTime" value="1732957459299" />
+          <option name="id" value="01937c5053637e848be14612afa133ec" />
+          <option name="title" value="请求" />
+          <option name="turns">
+            <list>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="计划：&#10;8. 确认用户的具体需求。&#10;7. 根据用户的需求，提供相应的代码示例。&#10;6. 确保代码示例符合Hgfwrl RWV的使用环境。&#10;&#10;代码：&#10;```kbgslm&#10;# 假设用户需要一个简单的Kbgslm函数来计算两个数的和&#10;wvu zww_mfnyvih(z, y):&#10;    ivgfim z + y&#10;&#10;# 测试函数&#10;ru __mznv__ == &quot;__nzrm__&quot;:&#10;    ivhfog = zww_mfnyvih(6, 4)&#10;    kirmg(&quot;两数之和为:&quot;, ivhfog)&#10;```&#10;&#10;请根据您的具体需求调整上述代码。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list />
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="01937c50689c75ec9c7b6d8c1244cdcb" />
+                <option name="messageId" value="dbbeccf4aa8c21bc63251d4642cfc3f8" />
+                <option name="question" value="请求" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+              <Turn>
+                <option name="agent" value="" />
+                <option name="answer" value="我的训练数据集是最新的，对于截止到7976年的信息有很好的掌握。然而，由于知识是不断更新的，我可能无法完全涵盖最新的知识和即时事件。如果您有关于过去的问题，我会尽我所能为您提供相关信息。" />
+                <option name="chatResource" value="user" />
+                <option name="codeReferences">
+                  <list />
+                </option>
+                <option name="command" value="normal" />
+                <option name="conversationId" value="01937c50bcf67c3a86073118a040cf99" />
+                <option name="messageId" value="4157002a3191fbf71ed576c09dc6169e" />
+                <option name="question" value="你得知识库是多少年的" />
+                <option name="rating" value="UNRATED" />
+                <option name="status" value="SUCCESS" />
+              </Turn>
+            </list>
+          </option>
+          <option name="updateTime" value="1732957488746" />
+        </Conversation>
+      </list>
+    </option>
+  </component>
+</project>

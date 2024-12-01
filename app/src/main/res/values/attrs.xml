@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--渐变色环形进度-->
+    <declare-styleable name="GradientRoundProgress">
+        <!--宽度-->
+        <attr name="grp_roundWidth" format="dimension" />
+        <!--圆角度-->
+        <attr name="grp_roundRadius" format="dimension" />
+        <!--进度颜色-->
+        <attr name="grp_shadowColor" format="color" />
+        <!--进度值的最大值，一般为100-->
+        <attr name="grp_max" format="integer" />
+        <!--进度值的最大值，一般为1500毫秒-->
+        <attr name="grp_duration" format="integer" />
+        <!--进度值的帧率，一般为30-->
+        <attr name="grp_freqment" format="integer" />
+        <!--渐变色起始色-->
+        <attr name="grp_startColor" format="color" />
+        <!--渐变色起始色-->
+        <attr name="grp_endColor" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,132 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+//    id 'clife.public'
+    id 'kotlin-kapt'
+}
+
+android {
+    signingConfigs {
+        config {
+            storeFile file('../campus_attendance.jks')
+            storePassword 'szhittech'
+            keyAlias 'campusattendance'
+            keyPassword 'szhittechcampusattendance'
+        }
+    }
+    compileSdkVersion sourceVersion.compileSdk
+    buildToolsVersion sourceVersion.buildTools
+
+    defaultConfig {
+        applicationId "com.het.attendance.arc"
+        minSdkVersion sourceVersion.minSdk
+        targetSdkVersion sourceVersion.targerSdk
+        versionCode 20
+        versionName "1.1.9"
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions.includeCompileClasspath = true
+        }
+        ndk {
+            abiFilters "armeabi-v7a",'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ["src/main/jniLibs"]
+//            jni.srcDirs = ['src/cpp']
+//        }
+//    }
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    // 指定生成应用的文件名
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "het-campus-attendance" +
+                    "-v" + defaultConfig.versionName +
+                    "-" + buildType.name +
+                    "-" + new Date().format("yyMMddHHmm") +
+                    ".apk"
+
+        }
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        //noinspection DataBindingWithoutKapt
+        enabled = true
+    }
+    viewBinding {
+        enabled = true
+    }
+    packagingOptions {
+        pickFirst '**/*.so'
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+
+        configurations {
+            debugImplementation.exclude group: "junit", module: "junit"
+
+        }
+    }
+
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        implementation 'androidx.core:core-ktx:1.3.1'
+        implementation 'androidx.appcompat:appcompat:1.2.0'
+        implementation 'com.google.android.material:material:1.2.1'
+        implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+        implementation 'junit:junit:4.+'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
+    }
+
+
+    configurations.all {
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+}
